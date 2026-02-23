@@ -1,838 +1,881 @@
-
-<!-- saved from url=(0073)https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Electricidad y Electrónica 1º ESO</title>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
 <meta http-equiv="Content-Language" content="es">
-<meta name="keywords" content="Portaleso, Enseñanza, Secundaria, ESO, Bachiller, Oposiciones, Apuntes, Actividades, Profesores, Alumnos, Recursos Educativos, Educación, Tecnología, Plástica, Electrónica, Mecánica, Electricidad">
-<meta name="DESCRIPTION" content="Portal educativo para la Enseñanza Secundaria Obligatoria y Bachilleres, con diversos trabajos, Actividades, exámenes, juegos, enlaces, chat y otros recursos útiles para alumnos y profesores.">
-<meta name="ROBOTS" content="INDEX, FOLLOW">
-<meta name="distribution" content="all, index, follow">
-<meta name="TITLE" content="Electricidad y Electrónica 1º ESO">
-<meta name="REVISIT-AFTER" content="1 DAYS">
-<meta name="RATING" content="GENERAL">
-<link rel="StyleSheet" href="./Electricidad y Electrónica 1º ESO_mejorado/estilos.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricidad y Electrónica – 1º ESO</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a2e4a;
+    --accent: #e8a020;
+    --accent2: #2d7dd2;
+    --bg: #f5f0e8;
+    --surface: #fff;
+    --surface2: #eef4fb;
+    --note-bg: #fffbe6;
+    --note-border: #e8a020;
+    --text: #1a1a2e;
+    --muted: #5a6070;
+    --border: #d0d8e4;
+    --section-stripe: #f0f5fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    background: var(--primary);
+    color: #fff;
+    padding: 48px 0 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.03) 40px,
+      rgba(255,255,255,0.03) 80px
+    );
+  }
+  .header-eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #fff;
+    position: relative;
+  }
+  .site-header h1 span {
+    color: var(--accent);
+  }
+  .header-atom {
+    margin-top: 24px;
+  }
+  .header-atom img {
+    width: 140px;
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 18px rgba(232,160,32,0.4));
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .header-author {
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .header-author a { color: var(--accent); text-decoration: none; }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Table of Contents ── */
+  .toc-wrapper {
+    background: var(--surface);
+    border-left: 5px solid var(--accent2);
+    border-radius: 0 8px 8px 0;
+    padding: 28px 32px;
+    margin: 40px 0;
+    box-shadow: 0 2px 16px rgba(45,125,210,0.09);
+  }
+  .toc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent2);
+    margin-bottom: 16px;
+  }
+  .toc-list {
+    list-style: none;
+    counter-reset: toc-counter;
+  }
+  .toc-list li {
+    counter-increment: toc-counter;
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list li::before {
+    content: counter(toc-counter) ".";
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 22px;
+    font-size: 0.9rem;
+  }
+  .toc-list a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+  }
+  .toc-list a:hover { color: var(--accent2); text-decoration: underline; }
+
+  /* ── Section ── */
+  .section {
+    background: var(--surface);
+    border-radius: 10px;
+    margin: 32px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,46,74,0.07);
+  }
+  .section-header {
+    background: var(--primary);
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-number {
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #fff;
+  }
+  .section-header h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .section-body {
+    padding: 28px;
+  }
+  .section-body p {
+    margin-bottom: 14px;
+    text-align: justify;
+  }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  /* ── Note box (yellow) ── */
+  .note-box {
+    background: var(--note-bg);
+    border: 1px solid var(--note-border);
+    border-left: 4px solid var(--note-border);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+  .note-box .note-label {
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Info box (blue) ── */
+  .info-box {
+    background: var(--surface2);
+    border-left: 4px solid var(--accent2);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    color: #1a2e4a;
+    font-size: 0.95rem;
+  }
+
+  /* ── Data table ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+  }
+  .data-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .data-table th:not(:first-child) { text-align: center; }
+  .data-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .data-table td:not(:first-child) { text-align: center; }
+  .data-table tr:nth-child(even) td { background: #f7f9fc; }
+  .data-table tr:hover td { background: #eef4fb; }
+
+  /* ── Symbol table ── */
+  .symbol-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .symbol-table thead tr th {
+    background: var(--accent2);
+    color: #fff;
+    padding: 10px 16px;
+    font-weight: 600;
+  }
+  .symbol-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    vertical-align: middle;
+  }
+  .symbol-table td:last-child { text-align: left; }
+  .symbol-table tr:nth-child(even) td { background: #f7f9fc; }
+
+  /* ── Two-column grid ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 16px 0;
+  }
+  @media (max-width: 600px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+  .col-card {
+    background: var(--section-stripe);
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+  }
+  .col-card img { border-radius: 4px; max-width: 100%; }
+  .col-card p { font-size: 0.9rem; margin-top: 8px; }
+
+  /* ── Figure / image ── */
+  figure {
+    margin: 22px 0;
+    text-align: center;
+  }
+  figure img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(26,46,74,0.1);
+  }
+  figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── Back to index ── */
+  .back-link {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 0.85rem;
+  }
+  .back-link a {
+    color: var(--accent2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .back-link a::before { content: '↑ '; }
+  .back-link a:hover { color: var(--accent); }
+
+  /* ── Circuit examples ── */
+  .circuit-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .circuit-row:last-child { border-bottom: none; }
+  .circuit-label { font-size: 0.95rem; }
+  .circuit-img { text-align: center; }
+  .circuit-img img { max-width: 100%; border-radius: 4px; }
+  .circuit-img em { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 600px) {
+    .circuit-row { grid-template-columns: 1fr; }
+  }
+
+  /* ── Activities ── */
+  .activity {
+    counter-increment: activity-counter;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 16px 0;
+    position: relative;
+  }
+  .activity-num {
+    position: absolute;
+    top: -14px;
+    left: 18px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .activity img { max-width: 100%; border-radius: 4px; margin-top: 12px; display: block; }
+
+  /* ── Footer ── */
+  .site-footer {
+    background: var(--primary);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 28px 24px;
+    margin-top: 48px;
+    font-size: 0.88rem;
+  }
+  .site-footer a { color: var(--accent); text-decoration: none; }
+  .site-footer img { vertical-align: middle; margin-right: 8px; }
+</style>
 </head>
 <body>
-<p align="right"><b>Autor: <a href="http://www.portaleso.com/">Antonio Bueno</a></b></p>
-<table border="1" align="center" bgcolor="#E5E5E5" cellspacing="0" cellpadding="0" width="85%">
-<tbody><tr><td align="center">
-<font class="title">
-Unidad didáctica:<br>  "Electricidad y Electrónica"
-</font>
-</td></tr>
-</tbody></table>
-<br>
-<br>
-<table border="0" align="center" cellspacing="0" cellpadding="0" width="85%">
-<tbody><tr><td align="center">
-<font class="title">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo.gif" width="327px">
-</font>
-</td></tr>
-</tbody></table>
-<br>
-<br>
 
-<table border="1" align="center" bgcolor="#E5E5E5" cellspacing="0" cellpadding="0" width="85%">
-<tbody><tr><td align="center">
-<font class="title">
-CURSO      1º ESO  
-</font>
-</td></tr>
-</tbody></table>
-<br>
-<br>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <p class="header-eyebrow">Unidad Didáctica · 1º ESO</p>
+    <h1>Electricidad y <span>Electrónica</span></h1>
+    <div class="header-atom">
+      <img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo.gif" alt="Átomo">
+    </div>
+    <p class="header-author">Autor: <a href="http://www.portaleso.com/">Antonio Bueno</a></p>
+  </div>
+</header>
 
-<a name="indice"></a><p align="right"><b>Autor: <a href="http://www.portaleso.com/">Antonio Bueno</a></b></p>
-<table border="1" align="center" bgcolor="#E5E5E5" cellspacing="0" cellpadding="0" width="85%">
-<tbody><tr><td align="center">
-<font class="title">
-Unidad didáctica:<br>  "Electricidad y Electrónica"
-</font>
-</td></tr>
-</tbody></table>
+<main class="container">
 
-<table border="0">
-<tbody><tr><td>
-<font class="content">
-<b>ÍNDICE</b><br><br>
-1.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#atomo"> El átomo y sus partículas.</a><br>
-2.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#materiales"> Materiales conductores, aislantes y semiconductores.</a><br>
-3.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#resistencia"> Resistencia. Corriente eléctrica. Diferencia de potencial.</a><br>
-4.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#ohm"> Circuito eléctrico, Elementos del circuito eléctrico, Ley de Ohm.</a><br>
-5.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#circuitos"> Circuitos básicos (serie, paralelo y mixto).</a><br>
-6.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#efectos"> Obtención de luz y calor. Otros Efectos. Receptores. Aplicaciones.</a><br>
-7.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#simbolos"> Simbología normalizada.</a><br>
-8.-&nbsp;<a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#actividades"> Actividades propuestas y ejercicios.</a><br>
-</font>
-</td></tr>
-</tbody></table>
+  <!-- TABLE OF CONTENTS -->
+  <nav class="toc-wrapper">
+    <div class="toc-title">Índice</div>
+    <ol class="toc-list">
+      <li><a href="#atomo">El átomo y sus partículas.</a></li>
+      <li><a href="#materiales">Materiales conductores, aislantes y semiconductores.</a></li>
+      <li><a href="#resistencia">Resistencia. Corriente eléctrica. Diferencia de potencial.</a></li>
+      <li><a href="#ohm">Circuito eléctrico, Elementos del circuito eléctrico, Ley de Ohm.</a></li>
+      <li><a href="#circuitos">Circuitos básicos (serie, paralelo y mixto).</a></li>
+      <li><a href="#efectos">Obtención de luz y calor. Otros Efectos. Receptores. Aplicaciones.</a></li>
+      <li><a href="#simbolos">Simbología normalizada.</a></li>
+      <li><a href="#actividades">Actividades propuestas y ejercicios.</a></li>
+    </ol>
+  </nav>
 
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="atomo">1.- El átomo y sus partículas.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="justify" colspan="2">
-<p align="justify">La materia está constituida por moléculas y éstas a su vez por átomos.</p>
+  <!-- SECTION 1 -->
+  <section class="section" id="atomo">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2><a name="atomo">El átomo y sus partículas.</a></h2>
+    </div>
+    <div class="section-body">
+      <p>La materia está constituida por moléculas y éstas a su vez por átomos.</p>
+      <p>El átomo, esta formado por un núcleo y una corteza. En el núcleo se encuentran los
+      protones y neutrones, mientras que en la corteza se encuentran los electrones, girando alrededor del
+      núcleo en distintas órbitas.</p>
 
-<p align="justify">El átomo, esta formado por un núcleo y una corteza. En el núcleo se encuentran los 
-protones y neutrones, mientras que en la corteza se encuentran los electrones, girando alrededor del 
-núcleo en distintas órbitas.</p>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo.gif" width="327" alt="Partículas del átomo">
+        <figcaption>Partículas del átomo</figcaption>
+      </figure>
 
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo.gif" width="327px">
-</td></tr>
-<tr><td align="center">
-<p align="center"><i>Partículas del átomo</i></p>
-</td></tr>
+      <p>Los protones poseen carga eléctrica positiva y masa. Los neutrones no poseen carga,
+      su función es la de mantener unidos a los protones entre si, y también poseen masa. Los electrones tienen
+      carga eléctrica negativa, del mismo valor que la del protón, su masa es muy inferior a la del protón o neutrón,
+      por lo que la consideraremos despreciable.</p>
 
-<tr><td colspan="2">
-<p align="justify">Los protones poseen carga eléctrica positiva y masa. Los neutrones no poseen carga, 
-su función es la de mantener unidos a los protones entre si, y también poseen masa. Los electrones tienen 
-carga eléctrica negativa, del mismo valor que la del protón, su masa es muy inferior a la del protón o neutrón, 
-por lo que la consideraremos despreciable.</p>
+      <p>Un átomo se considera eléctricamente neutro cuando tiene el mismo número de protones que de electrones.</p>
+      <p>La masa del átomo, es la suma de las masas de protones y neutrones.</p>
 
-<p align="justify">Un átomo se considera eléctricamente neutro cuando tiene el mismo número de protones que de 
-electrones. </p>
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
 
-<p align="justify">La masa del átomo, es la suma de las masas de protones y neutrones.</p>
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
+  <!-- SECTION 2 -->
+  <section class="section" id="materiales">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Materiales conductores, aislantes y semiconductores.</h2>
+    </div>
+    <div class="section-body">
+      <div class="two-col">
+        <div class="col-card">
+          <p>Las propiedades del átomo dependen de como están distribuidos sus electrones en la corteza.
+          Aquellos que tienen pocos electrones en su última capa y está incompleta, los pueden perder con facilidad, quedando
+          cargados positivamente (+). Estos átomos reciben el nombre de <strong>metales</strong>.</p>
+          <img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo_mg_p.jpg" width="235" alt="Átomo de Mg2+">
+          <p><em>Átomo de <strong>Mg<sup>2+</sup></strong></em></p>
+        </div>
+        <div class="col-card">
+          <p>Los átomos a los que les faltan pocos electrones para completar su última capa, los ganan con
+          facilidad, quedando cargados negativamente (−). Son los <strong>no metales</strong>.</p>
+          <img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo_mg_e.jpg" width="235" alt="Átomo de F-">
+          <p><em>Átomo de <strong>F<sup>−</sup></strong></em></p>
+        </div>
+      </div>
 
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="materiales">2.- Materiales conductores, aislantes y semiconductores.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center">
-<p align="justify">Las propiedades del átomo dependen de como están distribuidos sus electrones en la corteza. 
-Aquellos que tienen pocos electrones en su última capa y está incompleta, los pueden perder con facilidad, quedando 
-cargados positivamente (+). Estos átomos reciben el nombre de metales.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo_mg_p.jpg" width="235px">
-<p align="center"><i>Átomo de <b>Mg<sup>2+</sup></b></i></p>
-</td><td align="center">
-<p align="justify">Los átomos a los que les faltan pocos electrones para completar su última capa, los ganan con
- facilidad, quedando cargados negativamente (-). Son los no metales.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/atomo_mg_e.jpg" width="235px">
-<p align="center"><i>Átomo de <b>F<sup> -</sup></b></i></p>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">Si tienen completa la última capa, se quedan como están y quedarán neutros. Estos son los 
-gases nobles o inertes.</p>
-<p align="justify">Cuando los átomos metálicos se unen entre si los electrones de su última capa circulan por 
-la estructura con gran libertad, y por ello se les conoce como conductores. </p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/estructura_metalica.jpg" width="196px">
-<p align="center"><i>Red cristalina de un metal</i></p>
-<p align="justify">Cuando un material no permite la circulación de los electrones entre sus átomos, 
-se le conoce como aislante.</p>
-<p align="justify">Existen un grupo especial de materiales (Silicio y Germanio) que en determinadas 
-circunstancias permiten la circulación de sus electrones y en otras no, se les conoce como semiconductores.</p>
+      <p>Si tienen completa la última capa, se quedan como están y quedarán neutros. Estos son los gases nobles o inertes.</p>
+      <p>Cuando los átomos metálicos se unen entre si los electrones de su última capa circulan por
+      la estructura con gran libertad, y por ello se les conoce como <strong>conductores</strong>.</p>
 
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/estructura_metalica.jpg" width="196" alt="Red cristalina">
+        <figcaption>Red cristalina de un metal</figcaption>
+      </figure>
 
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="resistencia">3.- Resistencia. Corriente eléctrica. Diferencia de potencial.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center">
-<p align="justify">La <b>resistividad</b> (<img src="./Electricidad y Electrónica 1º ESO_mejorado/image010.gif" width="16px">) es una propiedad 
-intrínseca de cada material, cada material tiene la suya, indica la dificultad que encuentran los electrones a su paso.</p>
-</td><td align="center">
+      <p>Cuando un material no permite la circulación de los electrones entre sus átomos, se le conoce como <strong>aislante</strong>.</p>
+      <p>Existen un grupo especial de materiales (Silicio y Germanio) que en determinadas
+      circunstancias permiten la circulación de sus electrones y en otras no, se les conoce como <strong>semiconductores</strong>.</p>
 
-<table border="1" cellspacing="0" cellpadding="2" width="100%">
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
 
-<tbody><tr><td align="left">
-<b>Material</b>
-</td>
-<td align="center">
-<b>resistividad (<img src="./Electricidad y Electrónica 1º ESO_mejorado/image010.gif" width="16px"> )</b>
-</td>
-<td align="center">
-<b>Unidades</b>
-</td></tr>
+  <!-- SECTION 3 -->
+  <section class="section" id="resistencia">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Resistencia. Corriente eléctrica. Diferencia de potencial.</h2>
+    </div>
+    <div class="section-body">
+      <p>La <strong>resistividad</strong> (<img src="./Electricidad y Electrónica 1º ESO_mejorado/image010.gif" width="16" alt="rho">) es una propiedad
+      intrínseca de cada material, cada material tiene la suya, indica la dificultad que encuentran los electrones a su paso.</p>
 
-<tr><td align="left">
-Cobre
-</td>
-<td align="center">
-0,0172
-</td>
-<td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44px">
-</td></tr>
-<tr><td align="left">
-Aluminio
-</td>
-<td align="center">
-0,0283
-</td>
-<td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44px">
-</td></tr>
-<tr><td align="left">
-Hierro
-</td>
-<td align="center">
-0,1
-</td>
-<td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44px">
-</td></tr>
-<tr><td align="left">
-Madera
-</td>
-<td align="center">
-De 108 x 106 a 1.014 x 106
-</td>
-<td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44px">
-</td></tr>
-<tr><td align="left">
-Vidrio
-</td>
-<td align="center">
-1.010.000.000
-</td>
-<td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44px">
-</td></tr>
-</tbody></table>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Resistividad (<img src="./Electricidad y Electrónica 1º ESO_mejorado/image010.gif" width="16" alt="rho">)</th>
+            <th>Unidades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cobre</td>
+            <td>0,0172</td>
+            <td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44" alt="unidades"></td>
+          </tr>
+          <tr>
+            <td>Aluminio</td>
+            <td>0,0283</td>
+            <td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44" alt="unidades"></td>
+          </tr>
+          <tr>
+            <td>Hierro</td>
+            <td>0,1</td>
+            <td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44" alt="unidades"></td>
+          </tr>
+          <tr>
+            <td>Madera</td>
+            <td>De 10<sup>8</sup> × 10<sup>6</sup> a 10<sup>14</sup> × 10<sup>6</sup></td>
+            <td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44" alt="unidades"></td>
+          </tr>
+          <tr>
+            <td>Vidrio</td>
+            <td>1.010.000.000</td>
+            <td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44" alt="unidades"></td>
+          </tr>
+        </tbody>
+      </table>
 
-</td></tr>
-<tr><td align="left" colspan="2">
-<p align="justify">La <b>resistencia</b> al paso de electrones de un objeto depende de la resistividad de dicho material y 
-de la forma que tiene. La resistencia se puede medir y calcular.</p>
-</td></tr>
-<tr><td>
-<p align="justify">La formula que calcula la resistencia de una barra o de un hilo es:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image020.gif" width="56px"></center>
-<p align="justify">Donde:</p>
-<p align="justify"><b>R</b> es el valor de la resistencia en ohmios (<img src="./Electricidad y Electrónica 1º ESO_mejorado/omega.gif" width="12px">)</p>
-<p align="justify"> <img src="./Electricidad y Electrónica 1º ESO_mejorado/image010.gif" width="16px"> es la resistividad del materia ( <img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44px"> )</p>
-<p align="justify"><b>L</b> la longitud del elemento.</p>
-<p align="justify"><b>S</b> la sección del elemento.</p>
-</td><td>
-<table border="0" cellspacing="0" cellpadding="6" bgcolor="#FFFF99">
-<tbody><tr><td>
-<p align="justify"><b>Por ejemplo:</b></p>
-<p align="justify">Una barra de <b>cobre</b> de 12 m de longitud y 20 mm2 de sección tiene una resistencia de </p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image024.gif" width="256px"></center>
-<p align="justify">Si la barra es de <b>madera</b> de 12 m de longitud y 20 mm2 de sección su resistencia será de </p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image026.gif" width="264px"></center>
-</td></tr>
-</tbody></table>
-</td></tr>
+      <p>La <strong>resistencia</strong> al paso de electrones de un objeto depende de la resistividad de dicho material y
+      de la forma que tiene. La resistencia se puede medir y calcular.</p>
 
-<tr><td align="center" colspan="2">
-<p align="justify">Se define <b>la corriente eléctrica</b> como el paso ordenado de electrones a través de un conductor.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/conductor.jpg" width="333px">
-<p align="center"><i>Corriente de electrones a través un conductor</i></p> 
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">De manera que estos electrones pasan de un átomo al siguiente y así sucesivamente avanzando muy poco pero
- lo hacen muy rápidamente. </p>
-<p align="justify">La cantidad de carga que circula por un conductor en un segundo se denomina <b>Intensidad de Corriente</b> o 
-<b>Corriente eléctrica</b>. Se representa por la letra <b>I</b> y su unidad es el Amperio (<b>A</b>).</p>
-<p align="justify">Para que los electrones realicen este movimiento ordenado debe existir una fuerza que los impulse, 
-a esta fuerza se le llama <b>Diferencia de Potencial</b> o <b>Fuerza Electromotriz</b>. Esto lo podemos conseguir conectando cargas 
-de distinto signo en los extremos del conductor.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/conductor_cargas.jpg" width="385px"></center>
-<p align="center"><i>Fuerza electromotriz que impulsa la corriente de electrones a través un conductor</i></p> 
-<p align="justify">En la práctica se puede conseguir con una pila, con una batería o conectándolo a la red eléctrica.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/conductor_cargas_pila.jpg" width="385px"></center>
-<p align="center"><i>Obtención de la Fuerza electromotriz de una pila</i></p> 
-<p align="justify">La diferencia de potencial (voltaje) se representa por la letra <b>V</b> y su unidad es el Voltio (<b>V</b>).</p> 
+      <p>La fórmula que calcula la resistencia de una barra o de un hilo es:</p>
+      <figure><img src="./Electricidad y Electrónica 1º ESO_mejorado/image020.gif" width="56" alt="fórmula resistencia"></figure>
 
-</td></tr>
-<tr><td colspan="2" bgcolor="#FFFF99" style="border:solid windowtext .5pt;padding:2pt">
-<span style="color:navy"><p align="justify">Aunque son los electrones los que circulan del polo negativo
- &#920; al positivo <span style="font-family:Symbol;color:navy">Å</span>, siempre se ha considerado la 
-circulación de la corriente desde el polo positivo <span style="font-family:Symbol;color:navy">Å</span> hasta el polo
- negativo &#920;.</p></span> 
-</td></tr>
-<tr><td colspan="2">
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="ohm">4.- Circuito eléctrico, Elementos del circuito eléctrico, Ley de Ohm.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">Un <b>circuito eléctrico</b> es todo conjunto de elementos conectados entre sí, por los que circula 
-corriente eléctrica.</p>
-<p align="justify">Como mínimo debe estar compuesto de dos componentes:</p>
-<p align="justify"><b>Generador</b>: Es el encargado de crear la diferencia de potencial para que circulen los electrones.</p>
-<p align="justify"><b>Conductor</b>: Es el material a través del cual pasarán los electrones.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_cortocircuito.jpg" width="254px"></center>
-<p align="center"><i>Cortocircuito, no deseable</i></p>
-<p align="justify">Este tipo de circuito no es útil, sino justo lo contrario, puede incluso causar una desgracia ya 
-que las altas corrientes que circulan por el conductor pueden llegar a derretirlo y generar un fuego. A este circuito 
-se le conoce como <b>cortocircuito</b>.</p>
-<p align="justify">El <b>circuito básico</b> útil es aquel que además incluye un receptor, y un elemento de control 
-o maniobra.</p>
-<p align="justify"><b>Receptor</b>: Es el encargado de transformar la corriente eléctrica en otro tipo de energía. 
-Por ejemplo, una bombilla la transforma en luz.</p>
-<p align="justify"><b>Elemento de control</b>: Se encarga de permitir o interrumpir el paso de electrones. 
-Un interruptor es uno de ellos. Cuando interrumpimos el circuito los electrones que parten del polo negativo 
-del generador no pueden circular hasta el polo positivo y por lo tanto no hay circulación de corriente.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico.jpg" width="394px"></center>
-<p align="center"><i>Circuito básico</i></p>
-<p align="justify">Adicionalmente se puede incluir un elemento de protección.</p>
-<p align="justify"><b>Elemento de Protección</b>: Se trata de un elemento que  interrumpe el paso de electrones 
-en caso de cortocircuito, por ejemplo un cortacircuito fusible. Un cortacircuito fusible se destruye cuando se 
-produce un cortocircuito.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico_fusible.jpg" width="473px"></center>
-<p align="center"><i>Circuito básico con elemento de protección</i></p>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">El científico George Simon Ohm, relacionó la intensidad de corriente, la diferencia de potencial
- y la resistencia, enunciando la <b>ley de Ohm</b> de la forma siguiente:</p>
-<p align="justify">En  un conductor, en el que tenemos aplicada una diferencia de potencial de 1 Voltio y su 
-resistencia es de 1 Ohmio la intensidad de corriente que lo atraviesa será de 1 Amperio.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image040.gif" width="33px">
-<p align="justify">Esta ley se cumple siempre en todos los elementos sometidos a diferencia de potencial 
-y por los que circula intensidad de corriente.</p>
-</td></tr>
+      <p>Donde:</p>
+      <ul style="margin:10px 0 14px 24px; line-height:2;">
+        <li><strong>R</strong> es el valor de la resistencia en ohmios (<img src="./Electricidad y Electrónica 1º ESO_mejorado/omega.gif" width="12" alt="Ω">)</li>
+        <li><img src="./Electricidad y Electrónica 1º ESO_mejorado/image010.gif" width="16" alt="rho"> es la resistividad del material (<img src="./Electricidad y Electrónica 1º ESO_mejorado/image017.gif" width="44" alt="unidades">)</li>
+        <li><strong>L</strong> la longitud del elemento.</li>
+        <li><strong>S</strong> la sección del elemento.</li>
+      </ul>
 
-<tr><td align="center" colspan="2">
+      <div class="note-box">
+        <span class="note-label">Por ejemplo</span>
+        <p>Una barra de <strong>cobre</strong> de 12 m de longitud y 20 mm² de sección tiene una resistencia de:</p>
+        <figure><img src="./Electricidad y Electrónica 1º ESO_mejorado/image024.gif" width="256" alt="ejemplo cobre"></figure>
+        <p>Si la barra es de <strong>madera</strong> de 12 m de longitud y 20 mm² de sección su resistencia será de:</p>
+        <figure><img src="./Electricidad y Electrónica 1º ESO_mejorado/image026.gif" width="264" alt="ejemplo madera"></figure>
+      </div>
 
-<table border="0" cellspacing="0" cellpadding="6" bgcolor="#FFFF99">
-<tbody><tr><td>
-<p align="justify"><b>Por ejemplo:</b></p>
-<p align="justify">En el circuito anterior la pila tiene una diferencia de potencial de 9 Voltios, 
-la resistencia de la bombilla es de 100 W. ¿Qué intensidad de corriente saldrá de la pila y atravesará la bombilla?</p>
-<p align="justify"><span style="color:navy"><b>Solución:</b></span></p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image042.gif" width="107px"></center>
-<p align="justify">Luego circularán 0,09 A por la bombilla.</p>
-</td>
-</tr></tbody></table>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="circuitos">5.- Circuitos básicos (serie, paralelo y mixto).</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">Un <b>circuito serie</b>, es aquel que tiene conectados sus receptores uno a continuación del otro.</p>
-<p align="justify">Por ejemplo, estas bombillas están conectadas en serie.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_serie.jpg" width="381px">
-<p align="center"><i>Circuito Serie</i></p>
-</td></tr>
+      <p>Se define <strong>la corriente eléctrica</strong> como el paso ordenado de electrones a través de un conductor.</p>
 
-<tr><td colspan="2" bgcolor="#FFFF99" style="border:solid windowtext .5pt;padding:2px">
-<table style="color:navy" border="0" cellspacing="0" width="100%">
-<tbody><tr><td colspan="2">
-<p align="justify"><b>El circuito serie se caracteriza por:</b></p> 
-</td></tr>
-<tr><td>
-<p align="justify">La resistencia total del circuito es la suma de las resistencias que lo componen.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image046.gif" width="69px">
-</td></tr>
-<tr><td>
-<p align="justify">La corriente que circula es la misma por todos los elementos.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image048.gif" width="64px">
-</td></tr>
-<tr><td>
-<p align="justify">La fuerza electromotriz generada por el generador se reparte entre los distintos elementos.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image050.gif" width="59px">
-</td></tr>
-</tbody></table>
-</td></tr>
-<tr><td colspan="2 bgcolor=" #ffff99"="">
-<table border="0" cellspacing="0" cellpadding="6" bgcolor="#FFFF99">
-<tbody><tr><td>
-<p align="justify"><b>Por ejemplo:</b></p>
-<p align="justify">En el circuito serie anterior la pila tiene una diferencia de potencial de 9 Voltios y
- la resistencia de las bombillas es de 100 <img src="./Electricidad y Electrónica 1º ESO_mejorado/omega.gif" width="12px">. ¿Calcular todos los valores de este circuito?</p>
-<p align="justify"><span style="color:navy"><b>Solución:</b></span></p>
-<p align="justify">La resistencia total será:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image052.gif" width="187px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la corriente total:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image054.gif" width="139px"></center>
-<p align="justify">La corriente que circula por cada elemento es igual:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image056.gif" width="113px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la tensión en cada elemento:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image058.gif" width="177px"></center>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image060.gif" width="183px"></center>
-<p align="justify">Como comprobación tenemos que:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image062.gif" width="155px"></center>
-</td></tr>
-</tbody></table>
-</td></tr>
-<tr><td align="justify" colspan="2&gt;
-&lt;p align=" justify"="">Como conclusión, se puede observar que al repartirse la tensión entre las bombillas esto se refleja 
-con una disminución de la luminosidad de cada una de ellas.<p></p>
-<p align="justify">Otra observación interesante de este circuito es que si se rompe una de las bombillas, se interrumpe
- el circuito y deja de lucir la otra bombilla.</p>
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">Un <b>circuito paralelo</b>, es aquel que tiene conectados los terminales de sus receptores unidos entre si.</p>
-<p align="justify">Por ejemplo, estas bombillas están conectadas en paralelo.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_paralelo.jpg" width="323px">
-<p align="center"><i>Circuito Paralelo</i></p>
-</td></tr>
-<tr><td colspan="2" bgcolor="#FFFF99" style="border:solid windowtext .5pt;padding:2px">
-<table style="color:navy" border="0" cellspacing="0" width="100%">
-<tbody><tr><td colspan="2">
-<p align="justify"><b>El circuito paralelo se caracteriza por:</b></p> 
-</td></tr>
-<tr><td>
-<p align="justify">La inversa de la resistencia total del circuito es la suma de las inversas de las resistencias
- que lo componen.</p> 
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image066.gif" width="80px"></center>
-</td></tr>
-<tr><td>
-<p align="justify">Otra forma de expresar la resistencia total cuando son dos los elementos es:</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image068.gif" width="75px">
-</td></tr>
-<tr><td>
-<p align="justify">La corriente total que sale del generador se reparte por todos los elementos.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image070.gif" width="63px">
-</td></tr>
-<tr><td>
-<p align="justify">La fuerza electromotriz generada por el generador llega por igual a todos los elementos.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image072.gif" width="60px">
-</td></tr>
-</tbody></table>
-</td></tr>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/conductor.jpg" width="333" alt="Corriente de electrones">
+        <figcaption>Corriente de electrones a través de un conductor</figcaption>
+      </figure>
 
-<tr><td colspan="2 bgcolor=" #ffff99"="">
-<table border="0" cellspacing="0" cellpadding="6" bgcolor="#FFFF99">
-<tbody><tr><td>
-<p align="justify"><b>Por ejemplo:</b></p>
-<p align="justify">En el circuito paralelo anterior la pila tiene una diferencia de potencial de 9 Voltios y 
-la resistencia de las bombillas es de 100 <img src="./Electricidad y Electrónica 1º ESO_mejorado/omega.gif" width="12px">. ¿Calcular todos los valores de este circuito?</p>
-<p align="justify"><span style="color:navy"><b>Solución:</b></span></p>
-<p align="justify">La resistencia total será:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image074.gif" width="185px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la corriente total:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image076.gif" width="125px"></center>
-<p align="justify">La tensión que tiene cada bombilla es igual a la del generador:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image078.gif" width="88px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la corriente en cada elemento:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image080.gif" width="125px"></center>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image082.gif" width="129px"></center>
-<p align="justify">Como comprobación tenemos que:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image084.gif" width="185px"></center>
-</td></tr>
-</tbody></table>
-</td></tr>
+      <p>De manera que estos electrones pasan de un átomo al siguiente y así sucesivamente avanzando muy poco pero
+      lo hacen muy rápidamente.</p>
+      <p>La cantidad de carga que circula por un conductor en un segundo se denomina <strong>Intensidad de Corriente</strong> o
+      <strong>Corriente eléctrica</strong>. Se representa por la letra <strong>I</strong> y su unidad es el Amperio (<strong>A</strong>).</p>
+      <p>Para que los electrones realicen este movimiento ordenado debe existir una fuerza que los impulse,
+      a esta fuerza se le llama <strong>Diferencia de Potencial</strong> o <strong>Fuerza Electromotriz</strong>. Esto lo podemos conseguir conectando cargas
+      de distinto signo en los extremos del conductor.</p>
 
-<tr><td align="center" colspan="2">
-<p align="justify">Como conclusión, se puede observar que la tensión en las bombillas es la misma y esto se refleja 
-con la misma luminosidad que si estuviesen solas cada una de ellas.</p>
-<p align="justify">Otra observación interesante de este circuito es que aunque se rompa una de las bombillas, 
-no afecta a la otra y sigue luciendo con normalidad.</p>
-<p align="justify">Los elementos de nuestras viviendas están conectados en paralelo.</p>
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/conductor_cargas.jpg" width="385" alt="Fuerza electromotriz">
+        <figcaption>Fuerza electromotriz que impulsa la corriente de electrones a través de un conductor</figcaption>
+      </figure>
 
-<tr><td align="center" colspan="2">
-<p align="justify">Un <b>circuito mixto</b>, es aquel que tiene elementos en paralelo y en serie.</p>
-<p align="justify">Por ejemplo, las bombillas 2 y 3 están conectadas en paralelo y a la vez las dos en serie con la 1.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_mixto.jpg" width="425px">
-<p align="center"><i>Circuito mixto</i></p>
-<p align="justify">Este circuito aglutina las características de los dos circuitos, por lo que se tiene que resolver 
-poco a poco por partes, en primer lugar se resuelven los elementos que están en paralelo, y luego los 
-que están en serie.</p>
-<p align="justify">Las bombillas 2 y 3 están en paralelo luego tendremos:</p>
-</td></tr>
-<tr><td colspan="2" bgcolor="#FFFF99" style="border:solid windowtext .5pt;padding:2px">
-<table style="color:navy" border="0" cellspacing="0" width="100%">
-<tbody><tr><td colspan="2">
-<p align="justify"><b>Las bombillas 2 y 3 se caracterizan por:</b></p> 
-</td></tr>
-<tr><td>
-<p align="justify">La resistencia total de las bombillas 2 y 3 será:</p> 
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image088.gif" width="76px"></center>
-</td></tr>
-<tr><td>
-<p align="justify">La corriente total que circula por las dos bombillas es:</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image090.gif" width="64px">
-</td></tr>
-<tr><td>
-<p align="justify">La diferencia de potencia en las dos bombillas será la misma.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image092.gif" width="67px">
-</td></tr>
-</tbody></table>
-</td></tr>
-<tr><td align="center" colspan="2">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_mixto2.jpg" width="428px">
-<p align="center"><i>Circuito con resistencia equivalente del paralelo RP</i></p>
-<p align="justify">La bombilla 1 esta en serie con la resistencia equivalente del paralelo de las bombillas 2 y 3.</p>
-</td></tr>
-<tr><td colspan="2" bgcolor="#FFFF99" style="border:solid windowtext .5pt;padding:2px">
-<table style="color:navy" border="0" cellspacing="0" width="100%">
-<tbody><tr><td colspan="2">
-<p align="justify"><b>El circuito serie se caracteriza por: </b></p> 
-</td></tr>
-<tr><td>
-<p align="justify">La resistencia total del circuito es la suma de las resistencias que lo componen.</p> 
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image096.gif" width="71px"></center>
-</td></tr>
-<tr><td>
-<p align="justify">La corriente que circula es la misma por los dos elementos.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image098.gif" width="65px">
-</td></tr>
-<tr><td>
-<p align="justify">La fuerza electromotriz generada por el generador se reparte entre los distintos elementos.</p> 
-</td><td>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image100.gif" width="60px">
-</td></tr>
-</tbody></table>
-</td></tr>
+      <p>En la práctica se puede conseguir con una pila, con una batería o conectándolo a la red eléctrica.</p>
 
-<tr><td colspan="2 bgcolor=" #ffff99"="">
-<table border="0" cellspacing="0" cellpadding="6" bgcolor="#FFFF99">
-<tbody><tr><td>
-<p align="justify"><b>Por ejemplo:</b></p>
-<p align="justify">En el circuito mixto anterior la pila tiene una diferencia de potencial de 9 Voltios y la resistencia 
-de las bombillas es de 100 <img src="./Electricidad y Electrónica 1º ESO_mejorado/omega.gif" width="12px">. ¿Calcular todos los valores de este circuito?</p>
-<p align="justify"><span style="color:navy"><b>Solución:</b></span></p>
-<p align="justify">La resistencia de las bombillas en paralelo será:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image102.gif" width="187px"></center>
-<p align="justify">La resistencia total será la suma de RP y R1</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image104.gif" width="181px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la corriente total:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image106.gif" width="132px"></center>
-<p align="justify">La corriente que circula tanto por la bombilla 1 como por la resistencia equivalente del paralelo, 
-será igual a la total.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image108.gif" width="109px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la tensión que hay tanto en la bombilla 1 como en la resistencia 
-equivalente del paralelo de las bombillas 2 y 3.</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image110.gif" width="163px"></center>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image112.gif" width="167px"></center>
-<p align="justify">La tensión que tienen las bombillas 2 y 3 es igual a la del paralelo:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image114.gif" width="95px"></center>
-<p align="justify">De la ley de Ohm podemos obtener la corriente en las bombillas 2 y 3:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image116.gif" width="129px"></center>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image118.gif" width="128px"></center>
-<p align="justify">Como comprobación tenemos que:</p>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/image120.gif" width="188px"></center>
-</td></tr>
-</tbody></table>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">Este circuito tiene propiedades de los dos circuitos serie y paralelo.</p>
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/conductor_cargas_pila.jpg" width="385" alt="Pila">
+        <figcaption>Obtención de la Fuerza electromotriz de una pila</figcaption>
+      </figure>
 
+      <p>La diferencia de potencial (voltaje) se representa por la letra <strong>V</strong> y su unidad es el Voltio (<strong>V</strong>).</p>
 
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="efectos">6.- Obtención de luz y calor. Otros Efectos. Receptores. Aplicaciones.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">El paso de electrones a través de los cuerpos produce un efecto de excitación sobre los átomos. 
-Esta excitación crea un aumento de la temperatura del cuerpo y la emisión de luz.</p>
-<p align="justify">Si el objeto es un filamento fino de un material como el tungsteno, carbón, etc. el resultado es 
-un hilo muy radiante, que es capaz de iluminar todo lo que se encuentra  a su alrededor. Así como una elevada 
-temperatura junto al hilo.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/filamento.jpg" width="327px">
-<p align="center"><i>Fenómeno de incandescencia</i></p>
-<p align="justify">Un ejemplo de estos dos fenómenos luz y calor, son la bombilla incandescente y la estufa eléctrica.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/bombilla.jpg" width="127px">           
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/estufa.jpg" width="176px">
-<p align="center"><i>Luz y calor</i></p>
-<p align="justify">En el primer caso se aprovecha la potencia lumínica, y se desaprovecha el calor emitido por la bombilla,
- mientras que en el segundo caso se aprovecha la potencia calorífica, y no importa la iluminación que emite.</p>
-<p align="justify">Otro efecto que produce el paso de la corriente es el electromagnético. Es decir, un conductor por el 
-que hay variación de corriente eléctrica crea a su alrededor un campo magnético, que lo envuelve, comportándose como 
-un imán con polo norte y sur.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/campo_magnetico.jpg" width="226px">
-<p align="center"><i>Fenómeno magnético</i></p>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">Receptores que se basan en este efecto son los motores, timbres, zumbadores, dínamos, alternadores,
- transformadores, relés y un sinfín de aparatos.  Una aplicación muy extendida es la emisión de ondas electromagnéticas
- en la radio y el teléfono móvil, con ayuda de una antena.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/rele.jpg" width="400px">
-<p align="center"><i>Motor, zumbador, transformador y relé</i></p>
-<p align="justify">Una aplicación del motor es el taladro.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/taladro.jpg" width="308px">
-<p align="center"><i>Taladro</i></p>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">En numerosas ocasiones se combinan varios efectos en un mismo aparato, por ejemplo un secador del 
-pelo combina un motor con un ventilador y una resistencia que genera el calor.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/secador.jpg" width="233px">
-<p align="center"><i>Secador de pelo</i></p>
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="simbolos">7.- Simbología normalizada.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">A continuación pueden verse algunos de los símbolos normalizados utilizados en electricidad.</p>
-</td></tr>
+      <div class="info-box">
+        Aunque son los electrones los que circulan del polo negativo (−) al positivo (+), siempre se ha considerado la
+        circulación de la corriente desde el polo positivo (+) hasta el polo negativo (−).
+      </div>
 
-<tr><td align="center" width="50%" valign="top">
-<table border="1" cellspacing="0" cellpadding="0" width="100%">
-<tbody><tr><td align="center">
-Símbolo
-</td><td align="center">
-Descripción
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image193.jpg" width="63px">
-</td><td align="center">
-Corriente continua
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image194.jpg" width="51px">
-</td><td align="center">
-Corriente alterna
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image139.png" width="122px">
-</td><td align="center">
-Conductor
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image141.png" width="118px">
-</td><td align="center">
-Fusible
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image143.jpg" width="22px">
-</td><td align="center">
-Punto de unión
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image144.jpg" width="23px">
-</td><td align="center">
-Terminal
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image145.png" width="78px">
-</td><td align="center">
-Pila o acumulador, el trazo largo indica el positivo
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image147.png" width="122px">
-</td><td align="center">
-Resistencia
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image149.png" width="104px"><br>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image151.png" width="101px">
-</td><td align="center">
-Interruptor normalmente abierto (NA). Cualquiera de los dos símbolos es válido
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image153.png" width="117px">
-</td><td align="center">
-Conmutador
-</td></tr>
-</tbody></table>
-</td><td align="center" valign="top">
-<table border="1" cellspacing="0" cellpadding="0" width="100%">
-<tbody><tr><td align="center">
-Símbolo
-</td><td align="center">
-Descripción
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image155.png" width="98px">
-</td><td align="center">
-Conmutador con posicionamiento intermedio de corte
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image157.png" width="109px">
-</td><td align="center">
-Pulsador normalmente cerrado
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image159.png" width="85px">
-</td><td align="center">
-Pulsador normalmente abierto
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image161.png" width="105px">
-</td><td align="center">
-Motor de corriente continua
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image163.png" width="52px">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image165.png" width="57px">
-</td><td align="center">
-Bobina de relé, símbolo general. Cualquiera de los dos símbolos es válido.
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image167.png" width="80px">
-</td><td align="center">
-Timbre, Zumbador
-</td></tr>
-<tr><td align="center">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/image169.png" width="40px">
-</td><td align="center">
-Lámpara, símbolo general
-</td></tr>
-</tbody></table>
-</td></tr>
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
 
-<tr><td align="center" colspan="2">
-<p align="justify">Veamos cual será el esquema normalizado de los circuitos anteriores.</p>
-</td></tr>
-<tr><td align="center">
-<p align="justify"><b>Circuito en cortocircuito</b>, generador y conductor.</p>
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_cortocircuito_normal.jpg" width="75px"></center>
-<p align="center"><i>Circuito en cortocircuito</i></p>
-</td></tr>
-<tr><td align="center">
-<p align="justify"><b>Circuito básico</b>, con generador, interruptor y receptor (una lámpara).</p>
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico_normal.jpg" width="223px"></center>
-<p align="center"><i>Circuito básico</i></p>
-</td></tr>
-<tr><td align="center">
-<p align="justify"><b>Circuito básico con protección fusible</b>, los elementos son generador, fusible, 
-interruptor y receptor (una lámpara).</p>
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico_fusible_normal.jpg" width="223px"></center>
-<p align="center"><i>Circuito básico con protección</i></p>
-</td></tr>
-<tr><td align="center">
-<p align="justify"><b>Circuito serie</b> con dos lámparas.</p>
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_serie_normal.jpg" width="287px"></center>
-<p align="center"><i>Circuito serie</i></p>
-</td></tr>
-<tr><td align="center">
-<p align="justify"><b>Circuito paralelo</b> con dos lámparas.</p>
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_paralelo_normal.jpg" width="235px"></center>
-<p align="center"><i>Circuito paralelo</i></p>
-</td></tr>
-<tr><td align="center">
-<p align="justify"><b>Circuito mixto</b> con tres lámparas.</p>
-</td><td>
-<center><img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_mixto_normal.jpg" width="253px"></center>
-<p align="center"><i>Circuito mixto</i></p>
-</td></tr>
+  <!-- SECTION 4 -->
+  <section class="section" id="ohm">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Circuito eléctrico, Elementos del circuito eléctrico, Ley de Ohm.</h2>
+    </div>
+    <div class="section-body">
+      <p>Un <strong>circuito eléctrico</strong> es todo conjunto de elementos conectados entre sí, por los que circula
+      corriente eléctrica.</p>
+      <p>Como mínimo debe estar compuesto de dos componentes:</p>
+      <p><strong>Generador</strong>: Es el encargado de crear la diferencia de potencial para que circulen los electrones.</p>
+      <p><strong>Conductor</strong>: Es el material a través del cual pasarán los electrones.</p>
 
-<tr><td align="center" colspan="2">
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_cortocircuito.jpg" width="254" alt="Cortocircuito">
+        <figcaption>Cortocircuito, no deseable</figcaption>
+      </figure>
 
-<table border="0" cellspacing="15" cellpadding="0" width="100%">
-<tbody><tr><td colspan="2">
-<font class="subtitle">
-<a name="actividades">8.- Actividades propuestas y ejercicios.</a>
-</font>
-<br>
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">1.- Pon el tipo de elemento de que se trata en el circuito siguiente: Generador, Receptor, 
-Conductor, Elemento de protección, Elemento de Control.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/act_circuito_basico_fusible.jpg" width="473px">
-</td></tr>
+      <p>Este tipo de circuito no es útil, sino justo lo contrario, puede incluso causar una desgracia ya
+      que las altas corrientes que circulan por el conductor pueden llegar a derretirlo y generar un fuego. A este circuito
+      se le conoce como <strong>cortocircuito</strong>.</p>
+      <p>El <strong>circuito básico</strong> útil es aquel que además incluye un receptor, y un elemento de control o maniobra.</p>
+      <p><strong>Receptor</strong>: Es el encargado de transformar la corriente eléctrica en otro tipo de energía.
+      Por ejemplo, una bombilla la transforma en luz.</p>
+      <p><strong>Elemento de control</strong>: Se encarga de permitir o interrumpir el paso de electrones.
+      Un interruptor es uno de ellos. Cuando interrumpimos el circuito los electrones que parten del polo negativo
+      del generador no pueden circular hasta el polo positivo y por lo tanto no hay circulación de corriente.</p>
 
-<tr><td align="center" colspan="2">
-<p align="justify">2.- Teniendo en cuenta que los electrones pueden moverse libremente por el interior de los 
-conductores, indica la dirección hacia donde lo harán en las figuras siguientes.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/act_corriente_elect.jpg" width="233px">
-</td></tr>
-<tr><td align="center" colspan="2">
-<p align="justify">3.- Los dibujos siguientes, representan esquemas con símbolos que no están normalizados. 
-Dibuja los esquemas de nuevo con los símbolos normalizados.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/act_norm_zumba1.jpg" width="400px">
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/act_norm_resis1.jpg" width="314px">
-</td></tr>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico.jpg" width="394" alt="Circuito básico">
+        <figcaption>Circuito básico</figcaption>
+      </figure>
 
-<tr><td align="center" colspan="2">
-<p align="justify">4.- Obtén el valor de la resistencia equivalente en los circuitos siguientes.</p>
-<img src="./Electricidad y Electrónica 1º ESO_mejorado/act_norm_resis2.jpg" width="240px">
-</td></tr>
+      <p>Adicionalmente se puede incluir un elemento de protección.</p>
+      <p><strong>Elemento de Protección</strong>: Se trata de un elemento que interrumpe el paso de electrones
+      en caso de cortocircuito, por ejemplo un cortacircuito fusible. Un cortacircuito fusible se destruye cuando se
+      produce un cortocircuito.</p>
 
-<tr><td align="center" colspan="2">
-<p align="right"><a href="https://www.portaleso.com/electricidad_1eso/electricidad_1eso_indice.html#indice">Regresar al índice</a></p>
-</td></tr>
-</tbody></table>
-<center>
-<!-- Licencia de Creative Commons -->
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" border="0" src="./Electricidad y Electrónica 1º ESO_mejorado/somerights20.gif"></a><br>
-Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a>.
-<!-- /Licencia de Creative Commons -->
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico_fusible.jpg" width="473" alt="Circuito básico con fusible">
+        <figcaption>Circuito básico con elemento de protección</figcaption>
+      </figure>
 
-<!--
+      <p>El científico George Simon Ohm, relacionó la intensidad de corriente, la diferencia de potencial
+      y la resistencia, enunciando la <strong>ley de Ohm</strong> de la forma siguiente:</p>
+      <p>En un conductor, en el que tenemos aplicada una diferencia de potencial de 1 Voltio y su
+      resistencia es de 1 Ohmio la intensidad de corriente que lo atraviesa será de 1 Amperio.</p>
 
-<rdf:RDF xmlns="http://web.resource.org/cc/"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<Work rdf:about="">
-   <dc:title>Unidad didáctica &quot; Electricidad y Electrónica &quot;</dc:title>
-   <dc:description>Unidad didáctica con conceptos básicos sobre electricidad y electrónica. Ideal para primero de la ESO</dc:description>
-   <dc:creator><Agent>
-      <dc:title>Antonio Bueno Juan</dc:title>
-   </Agent></dc:creator>
-   <dc:rights><Agent>
-      <dc:title>Antonio Bueno Juan</dc:title>
-   </Agent></dc:rights>
-   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Interactive" />
-   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" />
-</Work>
+      <figure><img src="./Electricidad y Electrónica 1º ESO_mejorado/image040.gif" width="33" alt="I=V/R"></figure>
 
-<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">
-   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
-   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
-   <requires rdf:resource="http://web.resource.org/cc/Notice" />
-   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
-   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
-   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
-   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
-</License>
+      <p>Esta ley se cumple siempre en todos los elementos sometidos a diferencia de potencial y por los que circula intensidad de corriente.</p>
 
-</rdf:RDF>
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
 
--->
-</center>
+  <!-- SECTION 5 -->
+  <section class="section" id="circuitos">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Circuitos básicos (serie, paralelo y mixto).</h2>
+    </div>
+    <div class="section-body">
+      <p>Veamos los tres tipos de circuitos básicos y sus propiedades.</p>
 
-</body></html>
+      <h3 style="font-family:'Playfair Display',serif; color:var(--primary); margin:20px 0 10px; font-size:1rem;">Circuito en Serie</h3>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_serie.jpg" width="394" alt="Circuito serie">
+        <figcaption>Circuito serie</figcaption>
+      </figure>
+
+      <h3 style="font-family:'Playfair Display',serif; color:var(--primary); margin:20px 0 10px; font-size:1rem;">Circuito en Paralelo</h3>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_paralelo.jpg" width="394" alt="Circuito paralelo">
+        <figcaption>Circuito paralelo</figcaption>
+      </figure>
+
+      <h3 style="font-family:'Playfair Display',serif; color:var(--primary); margin:20px 0 10px; font-size:1rem;">Circuito Mixto</h3>
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_mixto.jpg" width="394" alt="Circuito mixto">
+        <figcaption>Circuito mixto</figcaption>
+      </figure>
+
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="section" id="efectos">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Obtención de luz y calor. Otros Efectos. Receptores. Aplicaciones.</h2>
+    </div>
+    <div class="section-body">
+      <p>El paso de electrones a través de los cuerpos produce un efecto de excitación sobre los átomos.
+      Esta excitación crea un aumento de la temperatura del cuerpo y la emisión de luz.</p>
+      <p>Si el objeto es un filamento fino de un material como el tungsteno, carbón, etc. el resultado es
+      un hilo muy radiante, que es capaz de iluminar todo lo que se encuentra a su alrededor. Así como una elevada
+      temperatura junto al hilo.</p>
+
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/filamento.jpg" width="327" alt="Incandescencia">
+        <figcaption>Fenómeno de incandescencia</figcaption>
+      </figure>
+
+      <p>Un ejemplo de estos dos fenómenos luz y calor, son la bombilla incandescente y la estufa eléctrica.</p>
+
+      <div style="text-align:center; margin:18px 0;">
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/bombilla.jpg" width="127" alt="Bombilla" style="margin-right:20px;">
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/estufa.jpg" width="176" alt="Estufa">
+        <p style="font-size:0.85rem; color:var(--muted); font-style:italic; margin-top:6px;">Luz y calor</p>
+      </div>
+
+      <p>En el primer caso se aprovecha la potencia lumínica, y se desaprovecha el calor emitido por la bombilla,
+      mientras que en el segundo caso se aprovecha la potencia calorífica, y no importa la iluminación que emite.</p>
+      <p>Otro efecto que produce el paso de la corriente es el electromagnético. Es decir, un conductor por el
+      que hay variación de corriente eléctrica crea a su alrededor un campo magnético, que lo envuelve, comportándose como
+      un imán con polo norte y sur.</p>
+
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/campo_magnetico.jpg" width="226" alt="Campo magnético">
+        <figcaption>Fenómeno magnético</figcaption>
+      </figure>
+
+      <p>Receptores que se basan en este efecto son los motores, timbres, zumbadores, dínamos, alternadores,
+      transformadores, relés y un sinfín de aparatos. Una aplicación muy extendida es la emisión de ondas electromagnéticas
+      en la radio y el teléfono móvil, con ayuda de una antena.</p>
+
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/rele.jpg" width="400" alt="Motor, zumbador, transformador, relé">
+        <figcaption>Motor, zumbador, transformador y relé</figcaption>
+      </figure>
+
+      <p>Una aplicación del motor es el taladro.</p>
+
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/taladro.jpg" width="308" alt="Taladro">
+        <figcaption>Taladro</figcaption>
+      </figure>
+
+      <p>En numerosas ocasiones se combinan varios efectos en un mismo aparato, por ejemplo un secador del
+      pelo combina un motor con un ventilador y una resistencia que genera el calor.</p>
+
+      <figure>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/secador.jpg" width="233" alt="Secador de pelo">
+        <figcaption>Secador de pelo</figcaption>
+      </figure>
+
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section class="section" id="simbolos">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Simbología normalizada.</h2>
+    </div>
+    <div class="section-body">
+      <p>A continuación pueden verse algunos de los símbolos normalizados utilizados en electricidad.</p>
+
+      <div class="two-col" style="margin-top:20px; align-items:start;">
+        <table class="symbol-table">
+          <thead><tr><th>Símbolo</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image193.jpg" width="63" alt="CC"></td><td>Corriente continua</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image194.jpg" width="51" alt="CA"></td><td>Corriente alterna</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image139.png" width="122" alt="Conductor"></td><td>Conductor</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image141.png" width="118" alt="Fusible"></td><td>Fusible</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image143.jpg" width="22" alt="Unión"></td><td>Punto de unión</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image144.jpg" width="23" alt="Terminal"></td><td>Terminal</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image145.png" width="78" alt="Pila"></td><td>Pila o acumulador, el trazo largo indica el positivo</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image147.png" width="122" alt="Resistencia"></td><td>Resistencia</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image149.png" width="104" alt="NA"><br><img src="./Electricidad y Electrónica 1º ESO_mejorado/image151.png" width="101" alt="NA2"></td><td>Interruptor normalmente abierto (NA). Cualquiera de los dos símbolos es válido</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image153.png" width="117" alt="Conmutador"></td><td>Conmutador</td></tr>
+          </tbody>
+        </table>
+        <table class="symbol-table">
+          <thead><tr><th>Símbolo</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image155.png" width="98" alt="Conmutador corte"></td><td>Conmutador con posicionamiento intermedio de corte</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image157.png" width="109" alt="Pulsador NC"></td><td>Pulsador normalmente cerrado</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image159.png" width="85" alt="Pulsador NA"></td><td>Pulsador normalmente abierto</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image161.png" width="105" alt="Motor CC"></td><td>Motor de corriente continua</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image163.png" width="52" alt="Bobina"><img src="./Electricidad y Electrónica 1º ESO_mejorado/image165.png" width="57" alt="Bobina2"></td><td>Bobina de relé, símbolo general. Cualquiera de los dos símbolos es válido.</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image167.png" width="80" alt="Timbre"></td><td>Timbre, Zumbador</td></tr>
+            <tr><td><img src="./Electricidad y Electrónica 1º ESO_mejorado/image169.png" width="40" alt="Lámpara"></td><td>Lámpara, símbolo general</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:24px;">Veamos cual será el esquema normalizado de los circuitos anteriores.</p>
+
+      <div style="margin-top:16px;">
+        <div class="circuit-row">
+          <div class="circuit-label"><p><strong>Circuito en cortocircuito</strong>, generador y conductor.</p></div>
+          <div class="circuit-img">
+            <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_cortocircuito_normal.jpg" width="75" alt="Cortocircuito normalizado">
+            <em>Circuito en cortocircuito</em>
+          </div>
+        </div>
+        <div class="circuit-row">
+          <div class="circuit-label"><p><strong>Circuito básico</strong>, con generador, interruptor y receptor (una lámpara).</p></div>
+          <div class="circuit-img">
+            <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico_normal.jpg" width="223" alt="Circuito básico normalizado">
+            <em>Circuito básico</em>
+          </div>
+        </div>
+        <div class="circuit-row">
+          <div class="circuit-label"><p><strong>Circuito básico con protección fusible</strong>, los elementos son generador, fusible, interruptor y receptor (una lámpara).</p></div>
+          <div class="circuit-img">
+            <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_basico_fusible_normal.jpg" width="223" alt="Circuito con fusible normalizado">
+            <em>Circuito básico con protección</em>
+          </div>
+        </div>
+        <div class="circuit-row">
+          <div class="circuit-label"><p><strong>Circuito serie</strong> con dos lámparas.</p></div>
+          <div class="circuit-img">
+            <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_serie_normal.jpg" width="287" alt="Circuito serie normalizado">
+            <em>Circuito serie</em>
+          </div>
+        </div>
+        <div class="circuit-row">
+          <div class="circuit-label"><p><strong>Circuito paralelo</strong> con dos lámparas.</p></div>
+          <div class="circuit-img">
+            <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_paralelo_normal.jpg" width="235" alt="Circuito paralelo normalizado">
+            <em>Circuito paralelo</em>
+          </div>
+        </div>
+        <div class="circuit-row">
+          <div class="circuit-label"><p><strong>Circuito mixto</strong> con tres lámparas.</p></div>
+          <div class="circuit-img">
+            <img src="./Electricidad y Electrónica 1º ESO_mejorado/circuito_mixto_normal.jpg" width="253" alt="Circuito mixto normalizado">
+            <em>Circuito mixto</em>
+          </div>
+        </div>
+      </div>
+
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section class="section" id="actividades">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Actividades propuestas y ejercicios.</h2>
+    </div>
+    <div class="section-body">
+
+      <div class="activity">
+        <span class="activity-num">Actividad 1</span>
+        <p>Pon el tipo de elemento de que se trata en el circuito siguiente: Generador, Receptor,
+        Conductor, Elemento de protección, Elemento de Control.</p>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/act_circuito_basico_fusible.jpg" width="473" alt="Actividad 1">
+      </div>
+
+      <div class="activity">
+        <span class="activity-num">Actividad 2</span>
+        <p>Teniendo en cuenta que los electrones pueden moverse libremente por el interior de los
+        conductores, indica la dirección hacia donde lo harán en las figuras siguientes.</p>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/act_corriente_elect.jpg" width="233" alt="Actividad 2">
+      </div>
+
+      <div class="activity">
+        <span class="activity-num">Actividad 3</span>
+        <p>Los dibujos siguientes, representan esquemas con símbolos que no están normalizados.
+        Dibuja los esquemas de nuevo con los símbolos normalizados.</p>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/act_norm_zumba1.jpg" width="400" alt="Actividad 3a">
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/act_norm_resis1.jpg" width="314" alt="Actividad 3b" style="margin-top:10px;">
+      </div>
+
+      <div class="activity">
+        <span class="activity-num">Actividad 4</span>
+        <p>Obtén el valor de la resistencia equivalente en los circuitos siguientes.</p>
+        <img src="./Electricidad y Electrónica 1º ESO_mejorado/act_norm_resis2.jpg" width="240" alt="Actividad 4">
+      </div>
+
+      <p class="back-link"><a href="#indice">Regresar al índice</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">
+    <img alt="Licencia Creative Commons" src="./Electricidad y Electrónica 1º ESO_mejorado/somerights20.gif">
+  </a>
+  Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia de Creative Commons</a>.
+  &nbsp;·&nbsp; Autor: <a href="http://www.portaleso.com/">Antonio Bueno</a>
+</footer>
+
+</body>
+</html>
